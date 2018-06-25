@@ -7,85 +7,87 @@
     tools:context="com.example.sergiu.firebaseauth.AplicationActivity">
 
     <ImageView
-        android:scaleType="centerCrop"
         android:id="@+id/imageView"
-        android:src="@drawable/baia"
         android:layout_width="match_parent"
-        android:layout_height="300dp" />
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baia" />
+
     <TextView
         android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
-        android:textSize="48dp"
-        android:textColor="@android:color/white"
         android:text="City Report"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textColor="@android:color/white"
+        android:textSize="48dp" />
+
     <TextView
         android:id="@+id/tv_meniu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
-        android:layout_below="@+id/tv_title"
-        android:textSize="48dp"
-        android:textColor="@android:color/white"
         android:text="Meniu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textColor="@android:color/white"
+        android:textSize="48dp" />
+
     <Button
         android:id="@+id/btn_log_out"
         android:layout_width="248dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_below="@+id/tv_meniu"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_button_solid"
         android:text="Log out"
-        android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white" />
 
     <Button
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginLeft="60dp"
-            android:layout_below="@+id/imageView"
-            android:background="@drawable/circle"
-            android:drawableTop="@android:drawable/ic_dialog_email"
-            android:paddingTop="25dp"
-            android:textColor="#fff"
-            android:id="@+id/button2" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@+id/button2"
-            android:layout_marginLeft="60dp"
-            android:textColor="#0189ff"
-            android:text="Adauga petitie" />
-
-    <ImageButton
+        android:id="@+id/btn_adaugaPetitie"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/imageButton"
+        android:layout_below="@+id/imageView"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/circle"
+        android:drawableTop="@android:drawable/ic_dialog_email"
+        android:paddingTop="25dp"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/tv_adaugaPetitie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_adaugaPetitie"
+        android:layout_marginLeft="60dp"
+        android:text="Adauga petitie"
+        android:textColor="#0189ff" />
+
+    <ImageButton
+        android:id="@+id/img_protejeazaAuto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_below="@+id/imageView"
         android:layout_marginLeft="250dp"
         android:background="@drawable/circle"
         android:src="@drawable/protectcar" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_protejeazaAuto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/img_protejeazaAuto"
         android:layout_marginLeft="240dp"
-        android:textColor="#0189ff"
-        android:text="Protejeaza auto" />
+        android:text="Protejeaza auto"
+        android:textColor="#0189ff" />
 
     <ImageButton
+        android:id="@+id/imageButton2"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/imageButton2"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/tv_protejeazaAuto"
         android:layout_marginLeft="250dp"
         android:background="@drawable/circle"
         android:src="@drawable/locatecar3" />
@@ -96,19 +98,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageButton2"
         android:layout_marginLeft="250dp"
-        android:textColor="#0189ff"
-        android:text="Locatie auto" />
+        android:text="Locatie auto"
+        android:textColor="#0189ff" />
 
     <Button
+        android:id="@+id/button3"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_below="@+id/tv_adaugaPetitie"
         android:layout_marginLeft="60dp"
-        android:layout_below="@+id/textView2"
         android:background="@drawable/circle"
         android:drawableTop="@android:drawable/ic_dialog_map"
         android:paddingTop="28dp"
-        android:textColor="#fff"
-        android:id="@+id/button3" />
+        android:textColor="#fff" />
 
     <TextView
         android:id="@+id/textView3"
@@ -116,9 +118,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button3"
         android:layout_marginLeft="60dp"
-        android:textColor="#0189ff"
-        android:text="Petitie mele" />
-
+        android:text="Petitie mele"
+        android:textColor="#0189ff" />
 
 
 </RelativeLayout>

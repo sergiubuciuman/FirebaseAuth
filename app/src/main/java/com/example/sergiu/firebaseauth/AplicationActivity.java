@@ -19,6 +19,8 @@ public class AplicationActivity extends AppCompatActivity implements View.OnClic
     //view objects
     private TextView textViewUserEmail;
     private Button buttonLogout;
+    private Button butonAdaugaPetitie;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +38,19 @@ public class AplicationActivity extends AppCompatActivity implements View.OnClic
             //starting login activity
             startActivity(new Intent(this, LoginActivity.class));
         }
-       
+
 
         //initializing views
         //textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
         buttonLogout = (Button) findViewById(R.id.btn_log_out);
+        butonAdaugaPetitie = (Button) findViewById(R.id.btn_adaugaPetitie);
 
+        //getting current user
+        //FirebaseUser user = firebaseAuth.getCurrentUser();
         //displaying logged in user name
         //Toast.makeText(AplicationActivity.this, "Welcome " + user.getEmail(), Toast.LENGTH_LONG).show();
         buttonLogout.setOnClickListener(this);
+        butonAdaugaPetitie.setOnClickListener(this);
 
     }
 
@@ -53,7 +59,6 @@ public class AplicationActivity extends AppCompatActivity implements View.OnClic
         //if logout is pressed
         switch (view.getId()) {
             case R.id.btn_log_out:
-
                 //logging out the user
                 firebaseAuth.signOut();
                 //closing activity
@@ -62,8 +67,10 @@ public class AplicationActivity extends AppCompatActivity implements View.OnClic
                 finish();
                 //starting login activity
                 startActivity(new Intent(this, LoginActivity.class));
-
             break;
+            case R.id.btn_adaugaPetitie:
+                Intent uploadActivityintent = new Intent(this, UploadImage.class);
+                startActivity(uploadActivityintent);
         }
     }
 }
